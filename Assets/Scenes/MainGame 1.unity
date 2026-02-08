@@ -632,6 +632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa63db84d37747e4280522c55952cc67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1options: []
+  moveAmount: 0
 --- !u!212 &145930013
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2569,6 +2571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ac04e40068b2d4ea12f0a9da57554d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player2options: []
+  moveAmount: 0
 --- !u!1 &948712654
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,12 @@ public class Player2Select : MonoBehaviour
     private int indexTrack;
     public float moveAmount;
     private Vector3 cursorOffset;
+
+    private int hatChoice;
+    private int shirtChoice;
+    private int pantsChoice;
+    private int shoesChoice;
+
     GameObject store;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,5 +57,29 @@ public class Player2Select : MonoBehaviour
             Destroy(store, 0.1f);
             store = Instantiate(chosenOutfit);
         }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (indexTrack > -1 && indexTrack < 5)
+            {
+                hatChoice = indexTrack;
+            }
+
+            else if (indexTrack > 4 && indexTrack < 9)
+            {
+                shirtChoice = indexTrack;
+            }
+
+            else if (indexTrack > 8 && indexTrack < 13)
+            {
+                pantsChoice = indexTrack;
+            }
+
+            else if (indexTrack > 12 && indexTrack < 17)
+            {
+                shoesChoice = indexTrack;
+            }
+        }
     }
 }
+

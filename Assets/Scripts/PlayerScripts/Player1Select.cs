@@ -60,7 +60,25 @@ public class Player1Select : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if(indexTrack > -1 && indexTrack < 5)
+            {
+                hatChoice = indexTrack;
+            }
 
+            else if (indexTrack > 4 && indexTrack < 9)
+            {
+                shirtChoice = indexTrack;
+            }
+
+            else if (indexTrack > 8 && indexTrack < 13)
+            {
+                pantsChoice = indexTrack;
+            }
+
+            else if (indexTrack > 12 && indexTrack < 17)
+            {
+                shoesChoice = indexTrack;
+            }
         }
     }
 

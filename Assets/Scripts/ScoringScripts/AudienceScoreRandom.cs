@@ -12,7 +12,8 @@ public class AudienceScoreRandom : MonoBehaviour
     void Start()
     {
         scoreRandom = Random.Range(1, 100);
-        audienceScore.text = scoreRandom.ToString(); 
+        audienceScore.text = scoreRandom.ToString();
+        Screen.SetResolution(1920, 1080, true);
     }
 
     // Update is called once per frame

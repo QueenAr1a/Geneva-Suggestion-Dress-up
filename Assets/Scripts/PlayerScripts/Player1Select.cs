@@ -19,6 +19,7 @@ public class Player1Select : MonoBehaviour
     {
         cursorOffset = transform.position;
         indexTrack = 0;
+        Screen.SetResolution(1920, 1080, true);
     }
 
     // Update is called once per frame

@@ -15,7 +15,8 @@ public class DressScore : MonoBehaviour
         float pantsScore = Player1Select.shirtChoice;
         float shoesScore = Player1Select.pantsChoice;
 
-        addUp = hatScore + (shirtScore + pantsScore + shoesScore); 
+        addUp = hatScore + (shirtScore + pantsScore + shoesScore);
+        addUp *= 10; 
         dressupScore.text = addUp.ToString();
     }
 }

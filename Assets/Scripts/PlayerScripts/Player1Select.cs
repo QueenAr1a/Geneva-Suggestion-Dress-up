@@ -63,21 +63,25 @@ public class Player1Select : MonoBehaviour
             if(indexTrack > -1 && indexTrack < 5)
             {
                 hatChoice = indexTrack;
+                Debug.Log(hatChoice); 
             }
 
             else if (indexTrack > 4 && indexTrack < 9)
             {
                 shirtChoice = indexTrack;
+                Debug.Log(shirtChoice); 
             }
 
             else if (indexTrack > 8 && indexTrack < 13)
             {
                 pantsChoice = indexTrack;
+                Debug.Log(pantsChoice); 
             }
 
             else if (indexTrack > 12 && indexTrack < 17)
             {
                 shoesChoice = indexTrack;
+                Debug.Log(shoesChoice); 
             }
         }
     }

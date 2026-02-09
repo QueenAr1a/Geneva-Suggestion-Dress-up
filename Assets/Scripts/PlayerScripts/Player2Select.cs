@@ -7,10 +7,10 @@ public class Player2Select : MonoBehaviour
     public float moveAmount;
     private Vector3 cursorOffset;
 
-    private int hatChoice;
-    private int shirtChoice;
-    private int pantsChoice;
-    private int shoesChoice;
+    public static int hatChoice;
+    public static int shirtChoice;
+    public static int pantsChoice;
+    public static int shoesChoice;
 
     GameObject store;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

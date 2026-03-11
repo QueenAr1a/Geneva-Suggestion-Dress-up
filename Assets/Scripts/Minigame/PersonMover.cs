@@ -8,6 +8,7 @@ public class PersonMover : MonoBehaviour
 
     [SerializeField] GameObject SnowBall;
     [SerializeField] Transform SnowBallSpawn;
+    [SerializeField] int _score; // The score value for hitting the target with a snowball
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

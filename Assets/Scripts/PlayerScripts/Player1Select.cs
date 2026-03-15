@@ -61,7 +61,18 @@ public class Player1Select : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(indexTrack > -1 && indexTrack < 5)
+            TelemetryLogger.Log(this, "Selection");
+
+            var data = new SelectEventData()
+            {
+                hatSelection = hatChoice.ToString(),
+                shirtSelection = shirtChoice.ToString(),
+                pantsSelection = pantsChoice.ToString(),
+                shoesSelection = shoesChoice.ToString()
+            };
+            TelemetryLogger.Log(this, "SelectionSummary", data);
+
+            if (indexTrack > -1 && indexTrack < 5)
             {
                 hatChoice = indexTrack;
                 Debug.Log(hatChoice); 
@@ -87,5 +98,17 @@ public class Player1Select : MonoBehaviour
         }
     }
 
+
+    [System.Serializable]
+    public struct SelectEventData
+    {
+        public string hatSelection;
+
+        public string shirtSelection;
+
+        public string pantsSelection;
+
+        public string shoesSelection;
+    }
     
 }

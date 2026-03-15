@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
 {
     public Slider slide; 
     public TextMeshProUGUI timerTime;
+    private Scene scene; 
     private float t;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,6 +16,7 @@ public class Timer : MonoBehaviour
         slide.maxValue = 60;
         slide.value = 60; 
         slide.minValue = 0; 
+        scene = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
@@ -26,7 +28,16 @@ public class Timer : MonoBehaviour
 
         if(t <= 0.1f)
         {
-            SceneManager.LoadScene("Score");
+            if(scene.name == "Minigame2")
+            {
+                SceneManager.LoadScene("Score");
+            }
+
+            else
+            {
+                SceneManager.LoadScene("Minigame2");
+            }
+               
         }
     }
 }

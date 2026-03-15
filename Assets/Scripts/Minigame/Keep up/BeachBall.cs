@@ -9,8 +9,9 @@ public class BeachBall : MonoBehaviour
 
     Rigidbody2D RB;
 
-    int Score = 0;
+    public static float score = 0;
 
+    float multiplier = 1f; 
     public TextMeshProUGUI ScoreTextP1;
 
     Vector2 SpawnPoint;
@@ -28,6 +29,7 @@ public class BeachBall : MonoBehaviour
         
         if(transform.position.y < MinY)
         {
+            multiplier = 1f; 
             transform.position = SpawnPoint;
             RB.linearVelocity = Vector3.zero;
         }
@@ -42,8 +44,9 @@ public class BeachBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Paddlep1"))
         {
-            Score += 100;
-            ScoreTextP1.text = Score.ToString("00000");
+            score += 100 * multiplier;
+            multiplier += 0.25f;
+            ScoreTextP1.text = score.ToString("00000");
         }
     }
 }

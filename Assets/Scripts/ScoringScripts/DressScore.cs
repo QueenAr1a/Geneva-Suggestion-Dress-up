@@ -10,6 +10,8 @@ public class DressScore : MonoBehaviour
     
     void Start()
     {
+        Screen.SetResolution(1920, 1080, true);
+
         float hatScore = Player1Select.shoesChoice;
         float shirtScore = Player1Select.hatChoice;
         float pantsScore = Player1Select.shirtChoice;

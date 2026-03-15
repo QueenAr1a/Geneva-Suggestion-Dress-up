@@ -8,7 +8,8 @@ public class Beachball2 : MonoBehaviour
 
     Rigidbody2D RB;
 
-    int Score = 0;
+    public static float score = 0;
+    float multiplier = 1f; 
     public TextMeshProUGUI ScoreTextP2;
 
     Vector2 SpawnPoint;
@@ -16,6 +17,7 @@ public class Beachball2 : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
+        Screen.SetResolution(1920, 1080, true);
 
         SpawnPoint = transform.position;
     }
@@ -26,6 +28,7 @@ public class Beachball2 : MonoBehaviour
 
         if (transform.position.y < MinY)
         {
+            multiplier = 1f; 
             transform.position = SpawnPoint;
             RB.linearVelocity = Vector3.zero;
         }
@@ -40,8 +43,9 @@ public class Beachball2 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Paddlep2"))
         {
-            Score += 100;
-            ScoreTextP2.text = Score.ToString("00000");
+            score += 100 * multiplier;
+            multiplier += 0.25f;
+            ScoreTextP2.text = score.ToString("00000");
         }
     }
 }

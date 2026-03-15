@@ -266,9 +266,9 @@ GameObject:
   - component: {fileID: 577119202}
   - component: {fileID: 577119205}
   - component: {fileID: 577119204}
-  - component: {fileID: 577119203}
+  - component: {fileID: 577119206}
   m_Layer: 5
-  m_Name: AudienceScore (1)
+  m_Name: minigamescore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,19 +293,6 @@ RectTransform:
   m_AnchoredPosition: {x: -565, y: 200}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &577119203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577119201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa14d01a81e6e44b849880504c0f95b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audienceScore: {fileID: 577119204}
 --- !u!114 &577119204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +392,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577119201}
   m_CullTransparentMesh: 1
+--- !u!114 &577119206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577119201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e897ca8fe451f404090c9f05aaeaf60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniGameScore: {fileID: 577119204}
 --- !u!1 &735675636
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 791992748}
   - component: {fileID: 791992750}
   m_Layer: 5
-  m_Name: AudienceScore
+  m_Name: minigamescore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -687,10 +687,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 791992746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa14d01a81e6e44b849880504c0f95b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0322191b8111a2244b8a9092047eb95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audienceScore: {fileID: 791992748}
+  miniGameScore: {fileID: 791992748}
 --- !u!1 &816451682
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 816451685}
   - component: {fileID: 816451684}
   m_Layer: 5
-  m_Name: AudienceText
+  m_Name: MiniGameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Audience Score:'
+  m_text: 'Minigame Score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -931,7 +931,7 @@ GameObject:
   - component: {fileID: 1110905504}
   - component: {fileID: 1110905503}
   m_Layer: 5
-  m_Name: AudienceText (1)
+  m_Name: MiniGameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -976,7 +976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Audience Score:'
+  m_text: 'Minigame Score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

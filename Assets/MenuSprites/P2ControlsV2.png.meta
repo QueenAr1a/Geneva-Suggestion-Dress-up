@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: f7d373b490ba00548a9999b34e5c65f3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8008790322302046548
+    second: P2ControlsV2_0
+  - first:
+      213: 500222361486843564
+    second: P2ControlsV2_1
+  - first:
+      213: -8758540261182699679
+    second: P2ControlsV2_2
+  - first:
+      213: 4477846605503159050
+    second: P2ControlsV2_3
+  - first:
+      213: -4232850480069049695
+    second: P2ControlsV2_4
+  - first:
+      213: 6570331119109608176
+    second: P2ControlsV2_5
+  - first:
+      213: 4357511495793829937
+    second: P2ControlsV2_6
+  - first:
+      213: 1319063035567095239
+    second: P2ControlsV2_7
+  - first:
+      213: -7608241280308692318
+    second: P2ControlsV2_8
+  - first:
+      213: -2084159704048993548
+    second: P2ControlsV2_9
+  - first:
+      213: -6562475450053488047
+    second: P2ControlsV2_10
+  - first:
+      213: 4103147726162470386
+    second: P2ControlsV2_11
+  - first:
+      213: 7558772774265071032
+    second: P2ControlsV2_12
+  - first:
+      213: -4670889053824892482
+    second: P2ControlsV2_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: P2ControlsV2_0
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1777
+        width: 156
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4515661ad50f42f60800000000000000
+      internalID: 8008790322302046548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_1
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1777
+        width: 206
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae5125669521f600800000000000000
+      internalID: 500222361486843564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_2
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 1703
+        width: 146
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1678f35890a637680800000000000000
+      internalID: -8758540261182699679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_3
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1777
+        width: 147
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b54b753c1842e30800000000000000
+      internalID: 4477846605503159050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_4
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 1777
+        width: 113
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a2842c3ae4e145c0800000000000000
+      internalID: -4232850480069049695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_5
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1782
+        width: 146
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2193b77518e2b50800000000000000
+      internalID: 6570331119109608176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_6
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1322
+        width: 244
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138e87b4e9df87c30800000000000000
+      internalID: 4357511495793829937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_7
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1327
+        width: 244
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd335797d04e4210800000000000000
+      internalID: 1319063035567095239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_8
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 1327
+        width: 242
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aabcb1add81a6690800000000000000
+      internalID: -7608241280308692318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_9
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1327
+        width: 246
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4faf9f0aac39313e0800000000000000
+      internalID: -2084159704048993548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_10
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1337
+        width: 158
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152175009576de4a0800000000000000
+      internalID: -6562475450053488047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_11
+      rect:
+        serializedVersion: 2
+        x: 1948
+        y: 1332
+        width: 140
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5add61e1f41f830800000000000000
+      internalID: 4103147726162470386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_12
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 1332
+        width: 238
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5a6f34ac726e860800000000000000
+      internalID: 7558772774265071032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P2ControlsV2_13
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 1332
+        width: 113
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1c189272bad2fb0800000000000000
+      internalID: -4670889053824892482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      P2ControlsV2_0: 8008790322302046548
+      P2ControlsV2_1: 500222361486843564
+      P2ControlsV2_10: -6562475450053488047
+      P2ControlsV2_11: 4103147726162470386
+      P2ControlsV2_12: 7558772774265071032
+      P2ControlsV2_13: -4670889053824892482
+      P2ControlsV2_2: -8758540261182699679
+      P2ControlsV2_3: 4477846605503159050
+      P2ControlsV2_4: -4232850480069049695
+      P2ControlsV2_5: 6570331119109608176
+      P2ControlsV2_6: 4357511495793829937
+      P2ControlsV2_7: 1319063035567095239
+      P2ControlsV2_8: -7608241280308692318
+      P2ControlsV2_9: -2084159704048993548
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

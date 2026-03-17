@@ -44,8 +44,8 @@ public class Beachball2 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Paddlep2"))
         {
-            score += 100 * multiplier;
-            multiplier += 0.25f;
+            score += 50 * multiplier;
+            multiplier += 0.2f;
             ScoreTextP2.text = score.ToString("00000");
         }
     }

@@ -18,7 +18,7 @@ public class DressScore : MonoBehaviour
         float shoesScore = Player1Select.shoesFinalPoints;
 
         addUp = hatScore + (shirtScore + pantsScore + shoesScore);
-        addUp *= 10; 
+        //addUp *= 10; 
         dressupScore.text = addUp.ToString();
         TelemetryLogger.Log(this, "Player 1 Dress Score", dressupScore);
     }

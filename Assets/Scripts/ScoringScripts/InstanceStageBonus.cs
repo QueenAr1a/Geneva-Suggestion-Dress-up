@@ -6,7 +6,7 @@ public class InstanceStageBonus : MonoBehaviour
     public int stage1Bonus;
     public int stage2Bonus;
 
-    public int baseValue = 1;
+    public int baseValue;
     public int clothingPoints;
 
     // When the instance is selected by the player

@@ -85,11 +85,12 @@ public class Player1Select : MonoBehaviour
             if (indexTrack > -1 && indexTrack < 5)
             {
                 hatChoice = indexTrack;
-                Debug.Log(hatChoice);
+                //Debug.Log(hatChoice);
 
                 //find the clothingPoints on the InstanceStageBonus and bring it here
                 InstanceStageBonus pointTotal = player1options[indexTrack].GetComponent<InstanceStageBonus>();
                 hatFinalPoints = pointTotal.clothingPoints; 
+                Debug.Log(hatFinalPoints);
             }
 
             else if (indexTrack > 4 && indexTrack < 9)

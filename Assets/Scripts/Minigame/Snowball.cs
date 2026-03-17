@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Snowball : MonoBehaviour
 {
     private float SnowballSpeed = 5f; // Speed at which the snowball moves
-    public float Score = 0f; // Score for the player
+  
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,12 +24,10 @@ public class Snowball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Person1") || collision.gameObject.CompareTag("Person2")) // If the snowball collides with a person, destroy it
+        if( collision.gameObject.CompareTag("Person2")) // If the snowball collides with a person, destroy it
         {
             Destroy(gameObject);
-
-            Score += 100f; // Increment the score by 1
-
+      
         }
 
         if(collision.gameObject.CompareTag("Cover")) // If the snowball collides with a wall, destroy it

@@ -12,6 +12,7 @@ TagManager:
   - Paddlep1
   - Paddlep2
   - Beachball2
+  - Snowball2
   layers:
   - Default
   - TransparentFX

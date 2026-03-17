@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Person2Mover : MonoBehaviour
@@ -8,6 +9,9 @@ public class Person2Mover : MonoBehaviour
 
     [SerializeField] GameObject SnowBall;
     [SerializeField] Transform SnowBallSpawner;
+    public TextMeshProUGUI scoreTextP2;
+    float multiplier = 1f;
+    public float score = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -55,6 +59,16 @@ public class Person2Mover : MonoBehaviour
 
             Instantiate(SnowBall, SnowBallSpawner.position, Quaternion.identity); // Spawn a snowball at the specified position
             Timer = 0f; // Reset the timer
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("SnowBall")) // If the snowball collides with a person, destroy it
+        {
+            
+            score += 100 * multiplier;
+            multiplier += 0.25f;
+            scoreTextP2.text = score.ToString("00000");
         }
     }
 } 

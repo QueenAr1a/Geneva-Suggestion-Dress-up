@@ -13,6 +13,16 @@ public class Player1Select : MonoBehaviour
     public static int pantsChoice;
     public static int shoesChoice;
 
+    public int player1HatScore;
+    public int player1ShirtScore;
+    public int player1PantsScore;
+    public int player1Shoescore;
+
+    public static int hatFinalPoints;
+    public static int shirtFinalPoints;
+    public static int pantsFinalPoints;
+    public static int shoesFinalPoints;
+
     GameObject store; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -75,25 +85,44 @@ public class Player1Select : MonoBehaviour
             if (indexTrack > -1 && indexTrack < 5)
             {
                 hatChoice = indexTrack;
-                Debug.Log(hatChoice); 
+                Debug.Log(hatChoice);
+
+                //find the clothingPoints on the InstanceStageBonus and bring it here
+                InstanceStageBonus pointTotal = player1options[indexTrack].GetComponent<InstanceStageBonus>();
+                hatFinalPoints = pointTotal.clothingPoints; 
             }
 
             else if (indexTrack > 4 && indexTrack < 9)
             {
                 shirtChoice = indexTrack;
-                Debug.Log(shirtChoice); 
+                Debug.Log(shirtChoice);
+
+
+                //find the clothingPoints on the InstanceStageBonus and bring it here
+                InstanceStageBonus pointTotal = player1options[indexTrack].GetComponent<InstanceStageBonus>();
+                shirtFinalPoints = pointTotal.clothingPoints;
             }
 
             else if (indexTrack > 8 && indexTrack < 13)
             {
                 pantsChoice = indexTrack;
-                Debug.Log(pantsChoice); 
+                Debug.Log(pantsChoice);
+
+
+                //find the clothingPoints on the InstanceStageBonus and bring it here
+                InstanceStageBonus pointTotal = player1options[indexTrack].GetComponent<InstanceStageBonus>();
+                pantsFinalPoints = pointTotal.clothingPoints;
             }
 
             else if (indexTrack > 12 && indexTrack < 17)
             {
                 shoesChoice = indexTrack;
-                Debug.Log(shoesChoice); 
+                Debug.Log(shoesChoice);
+
+
+                //find the clothingPoints on the InstanceStageBonus and bring it here
+                InstanceStageBonus pointTotal = player1options[indexTrack].GetComponent<InstanceStageBonus>();
+                shoesFinalPoints = pointTotal.clothingPoints;
             }
         }
     }

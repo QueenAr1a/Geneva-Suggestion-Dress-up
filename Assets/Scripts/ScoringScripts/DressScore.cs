@@ -12,10 +12,10 @@ public class DressScore : MonoBehaviour
     {
         Screen.SetResolution(1920, 1080, true);
 
-        float hatScore = Player1Select.shoesChoice;
-        float shirtScore = Player1Select.hatChoice;
-        float pantsScore = Player1Select.shirtChoice;
-        float shoesScore = Player1Select.pantsChoice;
+        float hatScore = Player1Select.hatFinalPoints; //Change this to grab the new clothing value off of the clothing piece - each piece does stage calculation seperately 
+        float shirtScore = Player1Select.shirtFinalPoints;
+        float pantsScore = Player1Select.pantsFinalPoints;
+        float shoesScore = Player1Select.shoesFinalPoints;
 
         addUp = hatScore + (shirtScore + pantsScore + shoesScore);
         addUp *= 10; 

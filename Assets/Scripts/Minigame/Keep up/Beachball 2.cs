@@ -31,6 +31,7 @@ public class Beachball2 : MonoBehaviour
             multiplier = 1f; 
             transform.position = SpawnPoint;
             RB.linearVelocity = Vector3.zero;
+            TelemetryLogger.Log(this, "Player 2 Ball Fall");
         }
 
         if (RB.linearVelocity.magnitude > MaxV)

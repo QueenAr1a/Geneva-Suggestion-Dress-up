@@ -319,7 +319,7 @@ MonoBehaviour:
   - {fileID: 8855154095299611658, guid: d15e4bd70b6855c47b5d08689d7ea7c7, type: 3}
   - {fileID: 2501382886217889067, guid: 64f4e63b761fd7b49b7d2e1f1b88ab46, type: 3}
   - {fileID: 8934487697698145661, guid: b342f75ab3d452548aa3953a4850b26d, type: 3}
-  moveAmount: 1.185
+  moveAmount: 1.2
 --- !u!212 &145930013
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -384,7 +384,7 @@ Transform:
   m_GameObject: {fileID: 145930011}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.2024, y: 0.683, z: 0}
+  m_LocalPosition: {x: -8.2, y: 0.7, z: 0}
   m_LocalScale: {x: 0.95, y: 0.95, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -655,7 +655,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: -8752028713342821100, guid: 33305f555095f3c4aab67f2aa0cf9aa6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -676,8 +676,8 @@ Transform:
   m_GameObject: {fileID: 520637798}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0242, y: 0, z: 0}
+  m_LocalScale: {x: 1.0025, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1774,7 +1774,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2051780749}
         m_TargetAssemblyTypeName: SessionDisplay, Assembly-CSharp
         m_MethodName: OnSuccess
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1789,7 +1789,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2051780749}
         m_TargetAssemblyTypeName: SessionDisplay, Assembly-CSharp
         m_MethodName: OnError
-        m_Mode: 5
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2780,6 +2780,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 861c61e3702fcbf45b4244f5d116b732, type: 3}
+    - target: {fileID: 1028627545359635065, guid: 1cbc9011007adcf44a21b6ac1e2f703b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5418895845417132220, guid: 1cbc9011007adcf44a21b6ac1e2f703b, type: 3}
       propertyPath: m_Name
       value: P2-OPTION1

@@ -11,5 +11,6 @@ public class MiniGameScore2 : MonoBehaviour
         float score = Beachball2.score; 
 
         miniGameScore.text = score.ToString();
+        TelemetryLogger.Log(this, "Player 2 Dress Score", miniGameScore);
     }
 }

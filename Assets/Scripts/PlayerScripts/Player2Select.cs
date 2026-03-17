@@ -25,13 +25,13 @@ public class Player2Select : MonoBehaviour
     void Update()
     {
         Vector3 playerPos = transform.position;
-        if (Input.GetKeyDown(KeyCode.UpArrow) && cursorOffset.y != playerPos.y)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && cursorOffset.y != playerPos.y && indexTrack >= 5)
         {
             playerPos.y += moveAmount;
             indexTrack -= 4;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && playerPos.x != cursorOffset.x - (moveAmount * 3))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && playerPos.x > cursorOffset.x - (moveAmount * 2.5))
         {
             playerPos.x -= moveAmount;
             indexTrack += 1; 
@@ -43,7 +43,7 @@ public class Player2Select : MonoBehaviour
             indexTrack -= 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && playerPos.y != cursorOffset.y - (moveAmount * 3))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && playerPos.y > cursorOffset.y - (moveAmount * 2.5))
         {
             playerPos.y -= moveAmount;
             indexTrack += 4;
@@ -60,6 +60,17 @@ public class Player2Select : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            TelemetryLogger.Log(this, "Player 2 Selection");
+
+            var data = new SelectEventData()
+            {
+                hatSelection = hatChoice.ToString(),
+                shirtSelection = shirtChoice.ToString(),
+                pantsSelection = pantsChoice.ToString(),
+                shoesSelection = shoesChoice.ToString()
+            };
+            TelemetryLogger.Log(this, "Player 2 SelectionSummary", data);
+
             if (indexTrack > -1 && indexTrack < 5)
             {
                 hatChoice = indexTrack;
@@ -80,6 +91,18 @@ public class Player2Select : MonoBehaviour
                 shoesChoice = indexTrack;
             }
         }
+    }
+
+
+    public struct SelectEventData
+    {
+        public string hatSelection;
+
+        public string shirtSelection;
+
+        public string pantsSelection;
+
+        public string shoesSelection;
     }
 }
 

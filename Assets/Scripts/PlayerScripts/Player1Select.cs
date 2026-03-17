@@ -26,7 +26,7 @@ public class Player1Select : MonoBehaviour
     void Update()
     {
         Vector3 playerPos = transform.position; 
-        if (Input.GetKeyDown(KeyCode.W) && cursorOffset.y != playerPos.y)
+        if (Input.GetKeyDown(KeyCode.W) && cursorOffset.y != playerPos.y && indexTrack >= 5)
         {
             playerPos.y += moveAmount;
             indexTrack -= 4; 
@@ -38,13 +38,13 @@ public class Player1Select : MonoBehaviour
             indexTrack -= 1; 
         }
 
-        if (Input.GetKeyDown(KeyCode.D) && playerPos.x != cursorOffset.x + (moveAmount * 3))
+        if (Input.GetKeyDown(KeyCode.D) && playerPos.x < cursorOffset.x + (moveAmount * 2.5))
         {
             playerPos.x += moveAmount;
             indexTrack += 1; 
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && playerPos.y != cursorOffset.y - (moveAmount * 3))
+        if (Input.GetKeyDown(KeyCode.S) && playerPos.y > cursorOffset.y - (moveAmount * 2.5))
         {
             playerPos.y -= moveAmount;
             indexTrack += 4; 
@@ -61,7 +61,7 @@ public class Player1Select : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            TelemetryLogger.Log(this, "Selection");
+            TelemetryLogger.Log(this, "Player 1 Selection");
 
             var data = new SelectEventData()
             {
@@ -70,7 +70,7 @@ public class Player1Select : MonoBehaviour
                 pantsSelection = pantsChoice.ToString(),
                 shoesSelection = shoesChoice.ToString()
             };
-            TelemetryLogger.Log(this, "SelectionSummary", data);
+            TelemetryLogger.Log(this, "Player 1 SelectionSummary", data);
 
             if (indexTrack > -1 && indexTrack < 5)
             {

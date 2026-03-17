@@ -20,5 +20,6 @@ public class DressScore : MonoBehaviour
         addUp = hatScore + (shirtScore + pantsScore + shoesScore);
         addUp *= 10; 
         dressupScore.text = addUp.ToString();
+        TelemetryLogger.Log(this, "Player 1 Dress Score", dressupScore);
     }
 }

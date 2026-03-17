@@ -12,6 +12,8 @@ public class Player1Select : MonoBehaviour
     public static int shirtChoice;
     public static int pantsChoice;
     public static int shoesChoice;
+    public AudioSource scrollClothing;
+    public AudioSource selectClothing;
 
 
 
@@ -36,25 +38,29 @@ public class Player1Select : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && cursorOffset.y != playerPos.y && indexTrack >= 4)
         {
             playerPos.y += moveAmount;
-            indexTrack -= 4; 
+            indexTrack -= 4;
+            scrollClothing.PlayOneShot(scrollClothing.clip, 1f);
         }
 
         if (Input.GetKeyDown(KeyCode.A) && playerPos.x != cursorOffset.x)
         {
             playerPos.x -= moveAmount;
-            indexTrack -= 1; 
+            indexTrack -= 1;
+            scrollClothing.PlayOneShot(scrollClothing.clip, 1f);
         }
 
         if (Input.GetKeyDown(KeyCode.D) && playerPos.x < cursorOffset.x + (moveAmount * 2.5))
         {
             playerPos.x += moveAmount;
-            indexTrack += 1; 
+            indexTrack += 1;
+            scrollClothing.PlayOneShot(scrollClothing.clip, 1f);
         }
 
         if (Input.GetKeyDown(KeyCode.S) && playerPos.y > cursorOffset.y - (moveAmount * 2.5))
         {
             playerPos.y -= moveAmount;
-            indexTrack += 4; 
+            indexTrack += 4;
+            scrollClothing.PlayOneShot(scrollClothing.clip, 1f);
         }
         transform.position = playerPos;
 
@@ -65,6 +71,7 @@ public class Player1Select : MonoBehaviour
             {
                 Destroy(storeHat, 0.1f);
                 storeHat = Instantiate(chosenHat);
+                selectClothing.PlayOneShot(selectClothing.clip, 1f);
             }
         }
 
@@ -78,6 +85,7 @@ public class Player1Select : MonoBehaviour
             {
                 Destroy(storeShirt, 0.1f);
                 storeShirt = Instantiate(chosenShirt);
+                selectClothing.PlayOneShot(selectClothing.clip, 1f);
             }
         }
 
@@ -91,6 +99,7 @@ public class Player1Select : MonoBehaviour
             {
                 Destroy(storePants, 0.1f);
                 storePants = Instantiate(chosenPants);
+                selectClothing.PlayOneShot(selectClothing.clip, 1f);
             }
         }
 
@@ -104,6 +113,7 @@ public class Player1Select : MonoBehaviour
             {
                 Destroy(storeShoes, 0.1f);
                 storeShoes = Instantiate(chosenShoes);
+                selectClothing.PlayOneShot(selectClothing.clip, 1f);
             }
         }
 

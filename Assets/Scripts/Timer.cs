@@ -9,6 +9,8 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerTime;
     private Scene scene; 
     private float t;
+    public AudioSource timer;
+    bool startTimer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +19,7 @@ public class Timer : MonoBehaviour
         slide.value = 60; 
         slide.minValue = 0; 
         scene = SceneManager.GetActiveScene();
+        startTimer = true;
     }
 
     // Update is called once per frame
@@ -25,6 +28,10 @@ public class Timer : MonoBehaviour
         t -= 1 * Time.deltaTime;
         slide.value = t; 
         timerTime.text = t.ToString("0.00");
+        if(t <= 5 && startTimer == true )
+        {
+            PlayTimer();
+        }
 
         if(t <= 0.1f)
         {
@@ -39,5 +46,11 @@ public class Timer : MonoBehaviour
             }
                
         }
+    }
+
+    void PlayTimer()
+    {
+        timer.PlayOneShot(timer.clip, 1f);
+        startTimer = false;
     }
 }

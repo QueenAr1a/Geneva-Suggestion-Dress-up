@@ -12,11 +12,18 @@ public class ReadyUpScript : MonoBehaviour
     public Sprite player2Gray;
     public Sprite player2Green;
 
+
     [Header("Tutorial")]
     public GameObject tutorialPanel;
 
     [Header("Scene")]
-    public float startDelay = 3f;
+    public float startDelay = 5f;
+
+    [Header("Audio")]
+    public AudioSource readyPlayerOne;
+    public AudioSource readyPlayerTwo;
+    public AudioSource tutorial;
+    public AudioSource clockTick;
 
     bool p1Ready = false;
     bool p2Ready = false;
@@ -28,6 +35,7 @@ public class ReadyUpScript : MonoBehaviour
         player1Ready.sprite = player1Gray;
         player2Ready.sprite = player2Gray;
         tutorialPanel.SetActive(false);
+     
     }
 
     void Update()
@@ -38,6 +46,7 @@ public class ReadyUpScript : MonoBehaviour
         {
             tutorialOpen = !tutorialOpen;
             tutorialPanel.SetActive(tutorialOpen);
+            tutorial.PlayOneShot(tutorial.clip, 1f);
             return;
         }
 
@@ -47,18 +56,21 @@ public class ReadyUpScript : MonoBehaviour
         {
             p1Ready = !p1Ready;
             player1Ready.sprite = p1Ready ? player1Green : player1Gray;
+            readyPlayerOne.PlayOneShot(readyPlayerOne.clip, 1f);
         }
 
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             p2Ready = !p2Ready;
             player2Ready.sprite = p2Ready ? player2Green : player2Gray;
+            readyPlayerTwo.PlayOneShot(readyPlayerTwo.clip, 1f);
         }
 
         if (p1Ready && p2Ready)
         {
             locked = true;
             StartCoroutine(StartGame());
+            clockTick.PlayOneShot(clockTick.clip, 1f);
         }
     }
 

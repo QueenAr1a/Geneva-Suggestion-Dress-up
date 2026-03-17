@@ -11,6 +11,7 @@ public class Beachball2 : MonoBehaviour
     public static float score = 0;
     float multiplier = 1f; 
     public TextMeshProUGUI ScoreTextP2;
+    public AudioSource bounce;
 
     Vector2 SpawnPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,6 +48,7 @@ public class Beachball2 : MonoBehaviour
             score += 50 * multiplier;
             multiplier += 0.2f;
             ScoreTextP2.text = score.ToString("00000");
+            bounce.PlayOneShot(bounce.clip, 1f);
         }
     }
 }

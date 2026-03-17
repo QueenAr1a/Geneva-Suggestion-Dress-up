@@ -13,7 +13,13 @@ public class Player1Select : MonoBehaviour
     public static int pantsChoice;
     public static int shoesChoice;
 
-    GameObject store; 
+
+
+    GameObject storeHat;
+    GameObject storeShirt;
+    GameObject storePants;
+    GameObject storeShoes;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,8 +31,9 @@ public class Player1Select : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         Vector3 playerPos = transform.position; 
-        if (Input.GetKeyDown(KeyCode.W) && cursorOffset.y != playerPos.y && indexTrack >= 5)
+        if (Input.GetKeyDown(KeyCode.W) && cursorOffset.y != playerPos.y && indexTrack >= 4)
         {
             playerPos.y += moveAmount;
             indexTrack -= 4; 
@@ -51,49 +58,89 @@ public class Player1Select : MonoBehaviour
         }
         transform.position = playerPos;
 
-        GameObject chosenOutfit = player1options[indexTrack];
-
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        if (indexTrack > -1 && indexTrack < 4)
         {
-            Destroy(store, 0.1f);
-            store = Instantiate(chosenOutfit);
+            GameObject chosenHat = player1options[indexTrack];
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Destroy(storeHat, 0.1f);
+                storeHat = Instantiate(chosenHat);
+            }
+        }
+
+        else if (indexTrack > 3 && indexTrack < 8)
+        {
+            shirtChoice = indexTrack;
+           
+
+            GameObject chosenShirt = player1options[indexTrack];
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Destroy(storeShirt, 0.1f);
+                storeShirt = Instantiate(chosenShirt);
+            }
+        }
+
+        else if (indexTrack > 7 && indexTrack < 12)
+        {
+            pantsChoice = indexTrack;
+        
+
+            GameObject chosenPants = player1options[indexTrack];
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Destroy(storePants, 0.1f);
+                storePants = Instantiate(chosenPants);
+            }
+        }
+
+        else if (indexTrack > 11 && indexTrack < 16)
+        {
+            shoesChoice = indexTrack;
+           
+
+            GameObject chosenShoes = player1options[indexTrack];
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Destroy(storeShoes, 0.1f);
+                storeShoes = Instantiate(chosenShoes);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            TelemetryLogger.Log(this, "Player 1 Selection");
-
             var data = new SelectEventData()
             {
                 hatSelection = hatChoice.ToString(),
                 shirtSelection = shirtChoice.ToString(),
                 pantsSelection = pantsChoice.ToString(),
-                shoesSelection = shoesChoice.ToString()
-            };
-            TelemetryLogger.Log(this, "Player 1 SelectionSummary", data);
+                shoesSelection = shoesChoice.ToString(),
+                playerTrack = 1
+            }; 
+            TelemetryLogger.Log(this, "SelectionSummary", data);
 
-            if (indexTrack > -1 && indexTrack < 5)
+            if (indexTrack > -1 && indexTrack < 4)
             {
                 hatChoice = indexTrack;
-                Debug.Log(hatChoice); 
+                
             }
 
-            else if (indexTrack > 4 && indexTrack < 9)
+            else if (indexTrack > 3 && indexTrack < 8)
             {
                 shirtChoice = indexTrack;
-                Debug.Log(shirtChoice); 
+                
             }
 
-            else if (indexTrack > 8 && indexTrack < 13)
+            else if (indexTrack > 7 && indexTrack < 12)
             {
                 pantsChoice = indexTrack;
-                Debug.Log(pantsChoice); 
+               
             }
 
-            else if (indexTrack > 12 && indexTrack < 17)
+            else if (indexTrack > 11 && indexTrack < 16)
             {
                 shoesChoice = indexTrack;
-                Debug.Log(shoesChoice); 
+               
             }
         }
     }
@@ -109,6 +156,8 @@ public class Player1Select : MonoBehaviour
         public string pantsSelection;
 
         public string shoesSelection;
+
+        public int playerTrack; 
     }
     
 }

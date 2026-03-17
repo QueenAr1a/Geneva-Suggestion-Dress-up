@@ -12,7 +12,11 @@ public class Player2Select : MonoBehaviour
     public static int pantsChoice;
     public static int shoesChoice;
 
-    GameObject store;
+
+    GameObject storeHat;
+    GameObject storeShirt;
+    GameObject storePants;
+    GameObject storeShoes;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,7 +29,7 @@ public class Player2Select : MonoBehaviour
     void Update()
     {
         Vector3 playerPos = transform.position;
-        if (Input.GetKeyDown(KeyCode.UpArrow) && cursorOffset.y != playerPos.y && indexTrack >= 5)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && cursorOffset.y != playerPos.y && indexTrack >= 4)
         {
             playerPos.y += moveAmount;
             indexTrack -= 4;
@@ -50,12 +54,53 @@ public class Player2Select : MonoBehaviour
         }
         transform.position = playerPos;
 
-        GameObject chosenOutfit = player2options[indexTrack];
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (indexTrack > -1 && indexTrack < 4)
         {
-            Destroy(store, 0.1f);
-            store = Instantiate(chosenOutfit);
+            GameObject chosenHat = player2options[indexTrack];
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Destroy(storeHat, 0.1f);
+                storeHat = Instantiate(chosenHat);
+            }
+        }
+
+        else if (indexTrack > 3 && indexTrack < 8)
+        {
+            shirtChoice = indexTrack;
+           
+
+            GameObject chosenShirt = player2options[indexTrack];
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Destroy(storeShirt, 0.1f);
+                storeShirt = Instantiate(chosenShirt);
+            }
+        }
+
+        else if (indexTrack > 7 && indexTrack < 12)
+        {
+            pantsChoice = indexTrack;
+           
+
+            GameObject chosenPants = player2options[indexTrack];
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Destroy(storePants, 0.1f);
+                storePants = Instantiate(chosenPants);
+            }
+        }
+
+        else if (indexTrack > 11 && indexTrack < 16)
+        {
+            shoesChoice = indexTrack;
+           
+
+            GameObject chosenShoes = player2options[indexTrack];
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Destroy(storeShoes, 0.1f);
+                storeShoes = Instantiate(chosenShoes);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Return))
@@ -67,26 +112,27 @@ public class Player2Select : MonoBehaviour
                 hatSelection = hatChoice.ToString(),
                 shirtSelection = shirtChoice.ToString(),
                 pantsSelection = pantsChoice.ToString(),
-                shoesSelection = shoesChoice.ToString()
-            };
-            TelemetryLogger.Log(this, "Player 2 SelectionSummary", data);
+                shoesSelection = shoesChoice.ToString(),
+                playerTrack = 2
+            }; 
+            TelemetryLogger.Log(this, "SelectionSummary", data);
 
-            if (indexTrack > -1 && indexTrack < 5)
+            if (indexTrack > -1 && indexTrack < 4)
             {
                 hatChoice = indexTrack;
             }
 
-            else if (indexTrack > 4 && indexTrack < 9)
+            else if (indexTrack > 3 && indexTrack < 8)
             {
                 shirtChoice = indexTrack;
             }
 
-            else if (indexTrack > 8 && indexTrack < 13)
+            else if (indexTrack > 7 && indexTrack < 12)
             {
                 pantsChoice = indexTrack;
             }
 
-            else if (indexTrack > 12 && indexTrack < 17)
+            else if (indexTrack > 11 && indexTrack < 16)
             {
                 shoesChoice = indexTrack;
             }
@@ -103,6 +149,8 @@ public class Player2Select : MonoBehaviour
         public string pantsSelection;
 
         public string shoesSelection;
+
+        public int playerTrack; 
     }
 }
 

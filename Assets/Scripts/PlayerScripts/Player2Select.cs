@@ -105,7 +105,6 @@ public class Player2Select : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            TelemetryLogger.Log(this, "Player 2 Selection");
 
             var data = new SelectEventData()
             {
